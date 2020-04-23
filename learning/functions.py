@@ -193,5 +193,8 @@ from tools import get_user_name as getname
 '''
 # import tools as tool
 # tool.get_user_name('高高')
-# from tools import get_user_name as getname
+
+# import sys
+# sys.path.append('../')
+# from modules.tools import get_user_name as getname
 # getname('憨憨')

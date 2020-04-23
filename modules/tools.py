@@ -15,5 +15,5 @@ def get_user_name(name):
 import sys
 sys.path.append('../')
 
-import functions
-functions.getName('aaaa')
+# import functions
+# functions.getName('aaaa')
