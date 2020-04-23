@@ -141,13 +141,57 @@ getName('乐进')中的 '乐进' 即是实参
 **形参名 创建一个字典 把剩余的实参统一包裹到了names中
 **others 创建了一个others的字典
 '''
-def your_info(first_name, last_name, **others):
-    info = {}
-    info['first_name'] = first_name
-    info['last_name'] = last_name
-    # 这里是做了遍历others字典的操作
-    for key, value in others.items():
-        info[key] = value
-    return info
+# def your_info(first_name, last_name, **others):
+#     info = {}
+#     info['first_name'] = first_name
+#     info['last_name'] = last_name
+#     # 这里是做了遍历others字典的操作
+#     for key, value in others.items():
+#         info[key] = value
+#     return info
 
-print(your_info('cao', 'youjin', age=18, height=175, weight=128))
+# print(your_info('cao', 'youjin', age=18, height=175, weight=128))
+
+
+
+
+# 模块化
+'''
+调用其他文件中 的 函数
+使用关键字 import + 文件名
+通过文件名.函数名 进行调用
+'''
+
+'''同级目录下 直接 import 文件名'''
+# import tools
+# tools.get_user_name('曹尤进')
+
+
+'''非同级目录下 且在下一级目录中 需要在引入模块文件下创建一个 __init__.py 文件'''
+# import modules.tools
+# modules.tools.get_user_name('hhh')
+
+'''
+非同级目录下 且是低于需要引入到的文件路径时
+import tools
+tools.path.append('..') 
+如果相差一个层级 则 append('../')  相差两个层级 append('../../') 以此类推 
+'''
+
+'''
+from ...import语句
+可以直接从模块中导入一个指定的函数到当前命名空间中
+from 文件名 import 函数,函数1,函数2 ...
+'''
+# from tools import get_user_name
+# get_user_name('你好呀')
+
+'''
+使用 as 指定别名
+import tools as tool
+from tools import get_user_name as getname
+'''
+# import tools as tool
+# tool.get_user_name('高高')
+# from tools import get_user_name as getname
+# getname('憨憨')
