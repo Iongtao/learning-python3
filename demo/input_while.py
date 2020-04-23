@@ -10,6 +10,7 @@
 #     message = input(tips)
 
 # 使用标记
+# 即为使用一个可以去标识程序运行状态的一系列标识 如活动是否进行中 用户是否登录等标识
 # actived = True
 # while actived:
 #     message = input(tips)
