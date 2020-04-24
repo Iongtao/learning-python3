@@ -40,7 +40,7 @@ while actived:
         again = input('\n是否还有其他人需要反馈的吗？\n请输入yes/no：')
         # 当输入的值 不是 yes no 则一直重复问题
         if again not in ['yes', 'no']:
-            print('请输入 yes/no：')
+            print('请输入 yes/no！')
         # 如果是 就跳出循环
         else:
             result = False
