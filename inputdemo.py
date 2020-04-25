@@ -25,7 +25,7 @@ for i in range(0, len(qanda)):
     message += str(i + 1) + '：' + qanda[i]['q'] + '\n'
 print(message)
 
-message = input(message)
+message = int(input(message))
 if message in indexs:
     print(qanda[message - 1]['a'])
 else:
