@@ -163,11 +163,14 @@ getName('乐进')中的 '乐进' 即是实参
 '''
 
 '''同级目录下 直接 import 文件名'''
-# import tools
-# tools.get_user_name('曹尤进')
+# import myfunction
+# myfunction.get_user_name('曹尤进')
 
 
 '''非同级目录下 且在下一级目录中 需要在引入模块文件下创建一个 __init__.py 文件'''
+import sys
+sys.path.append('../')
+
 # import modules.tools
 # modules.tools.get_user_name('hhh')
 
@@ -183,7 +186,7 @@ from ...import语句
 可以直接从模块中导入一个指定的函数到当前命名空间中
 from 文件名 import 函数,函数1,函数2 ...
 '''
-# from tools import get_user_name
+# from myfunction import get_user_name
 # get_user_name('你好呀')
 
 '''
