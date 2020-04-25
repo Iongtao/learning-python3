@@ -1,3 +1,4 @@
 *.pyc
 .vscode/*
 private/*
+__pycache__/*
