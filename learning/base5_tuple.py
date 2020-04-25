@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # 元组 tuple 用括号包裹
-# 一组元素不可以修改的列表
+# 意为一组元素不可以修改的列表
 # names = ('lejin', 'jiaxu', 'lvmeng')
 # print(names[0])
 # del names[0]  # 不可进行操作
