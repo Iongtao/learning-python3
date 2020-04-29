@@ -37,5 +37,9 @@ class HuntingDog(Dog):
         self.hunting = Hunting(name)
 
 
-dugao = HuntingDog('杜高犬', 2)
-dugao.hunting.desciption()
+if __name__ == '__main__':
+    dugao = HuntingDog('杜高犬', 2)
+    dugao.hunting.desciption()
+    print('直接 python 当前这个文件时候 触发')
+else:
+    print('在别的文件中引用执行的时候 触发')

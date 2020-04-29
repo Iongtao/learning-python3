@@ -2,7 +2,7 @@
 # coding=utf-8
 
 if __name__ == '__main__':
-    print('直接 python 当前这个文件时候 出发')
+    print('直接 python 当前这个文件时候 触发')
 else: 
     print('在别的文件中引用执行的时候 触发')
 
