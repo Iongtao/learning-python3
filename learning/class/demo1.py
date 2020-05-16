@@ -24,9 +24,11 @@ class Dog():
 
 # 例1
 class Dog():
+    high = 10  # 类变量
     # 创建时会执行
     # 将 创建时 传入的 name 和 age 赋值给 创建的实例的name和age相关联
     def __init__(self, name, age):
+        # name age 都是实例属性（实例变量）
         self.name = name
         self.age = age
     
@@ -46,3 +48,5 @@ dog_1.sit()
 # 你可以使用Dog类 创建多个实例对象
 dog_2 = Dog('汪汪', 2)
 dog_2.desc()
+
+print(Dog.high)
