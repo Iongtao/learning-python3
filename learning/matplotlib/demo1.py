@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 
 # 提供一组平方数
+input_values = [1,2,3,4,5]
 squares = [1,4,9,16,25]
 '''
 绘制对应的图形
@@ -8,7 +9,7 @@ plt.plot([1,4,9,16,25]) 指定了所绘图形的纵坐标, 横坐标未指定，
 plt.plot([2,4,6,8,10],[1,4,9,16,25]) 指定了横坐标 list1将和list2一一对应 (2,1),(4,4),(6,9),...,(10, 25)
 linewidth=5 指定 线条的宽度为5
 '''
-plt.plot(squares, linewidth=5)
+plt.plot(input_values, squares, linewidth=5)
 
 '''
 设置图表标题
