@@ -26,7 +26,7 @@ print('当前听歌数量：' + str(num))
 
 try:
     # 和缓存文件进行比较 如果没有则创建新的文件
-    with open('test/list.txt', 'r+', encoding="utf-8") as file_object:
+    with open(r'C:\Users\kuror\Desktop\python3-learning-project\test\list.txt', 'r+', encoding="utf-8") as file_object:
         backlist = file_object.readlines()
         for i in range(len(backlist)):
             result.append(backlist[i].replace('\n', ''))
@@ -35,11 +35,11 @@ try:
         # if num == re.sub(r"\D", "", result[0]):
         #     print('没有听新的歌曲')
 
-    with open('test/list.txt', 'w+', encoding='utf-8') as write_file:
+    with open(r'C:\Users\kuror\Desktop\python3-learning-project\test\list.txt', 'w+', encoding='utf-8') as write_file:
         write_file.write(numText + '\n')
 
 except FileNotFoundError as err:
-    with open('test/list.txt', 'w+', encoding='utf-8') as write_file:
+    with open(r'C:\Users\kuror\Desktop\python3-learning-project\test\list.txt', 'w+', encoding='utf-8') as write_file:
         write_file.write(numText + '\n')
 
 
@@ -51,7 +51,7 @@ newlist = []
 for i in range(len(lis)):
     songName = lis[i].find_element_by_class_name('song').text
 
-    with open('test/list.txt', 'a', encoding='utf-8') as write_file:
+    with open(r'C:\Users\kuror\Desktop\python3-learning-project\test\list.txt', 'a', encoding='utf-8') as write_file:
         write_file.write(songName + '\n')
     if songName not in result[1:]:
         newlist.append(songName)
