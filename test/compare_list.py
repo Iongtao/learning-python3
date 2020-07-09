@@ -47,6 +47,7 @@ except FileNotFoundError as err:
 ul = driver.find_element_by_css_selector('.j-flag > ul')
 lis = ul.find_elements_by_tag_name('li')
 newlist = []
+liftList = []
 
 for i in range(len(lis)):
     songName = lis[i].find_element_by_class_name('song').text
@@ -55,6 +56,12 @@ for i in range(len(lis)):
         write_file.write(songName + '\n')
     if songName not in result[1:]:
         newlist.append(songName)
+    else:
+        # 记录下 排行有提升的歌曲以及索引
+        index = result[1:].index(songName)
+        if i > index:
+            liftList.append(songName + '  |  '+ '上升了' + str(i - index) + '位')
+
 
 
 # 遍历出新增的歌曲
@@ -63,4 +70,9 @@ if len(newlist) > 0:
     for i in range(len(newlist)):
         print(newlist[i])
 else:
-    print('她没有听新的歌曲')
+    if len(liftList) > 0:
+        print('她有在听歌')
+        for i in range(len(liftList)):
+            print(liftList[i])
+    else:
+        print('她没有听歌')
